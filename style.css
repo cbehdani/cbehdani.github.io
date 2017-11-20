@@ -38,3 +38,14 @@ aside{
 .navbar-custom{
     background-color: #62b0bc;
 }
+
+.card-img-top{
+    height:100%;
+    width: 100%;
+}
+
+.card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+}
