@@ -12,8 +12,10 @@ body{
 }
 */
 
+
 .bodytext{
     background-color: #c9c9ad;
+    overflow-x:hidden;
 }
 
 .jumbotron{
@@ -59,3 +61,10 @@ aside{
         float: none; /* Added */
         margin-bottom: 10px; /* Added */
 }
+
+/* neon red to troubleshoot
+* {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+}*/
