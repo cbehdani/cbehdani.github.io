@@ -6,8 +6,18 @@ h1{
     margin: 10px;
 }
 
+/*
 body{
     background-color: #c9c9ad !important;
+}
+*/
+
+.bodytext{
+    background-color: #c9c9ad;
+}
+
+.jumbotron{
+    margin-bottom: 0px;
 }
 
 #mission_statement{
