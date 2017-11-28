@@ -6,6 +6,15 @@ h1{
     margin: 10px;
 }
 
+
+@media screen and (max-width: 768px) {
+      h1 {
+            font-size: 30px;
+      }
+      
+}
+
+
 /*
 body{
     background-color: #c9c9ad !important;
