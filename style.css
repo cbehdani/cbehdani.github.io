@@ -20,11 +20,24 @@ body{
 
 .jumbotron{
     margin-bottom: 0px;
+    min-height: 900px;
+    
+/*    centering text in jumbotron*/
+    display:flex;
+    align-content:center;
+    align-items:center;
+
+     
+    
 }
 
 #mission_statement{
     font-size: 20px;
 }
+
+.container{
+        text-align: center
+}   
 
 .menu{
     background: #3B7867;
@@ -68,3 +81,5 @@ aside{
     color: #0f0 !important;
     outline: solid #f00 1px !important;
 }*/
+
+
