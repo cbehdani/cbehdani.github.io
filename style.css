@@ -1,18 +1,13 @@
 h1{
     color: black;
     font-family: arial;
-    font-size: 50px;
+    font-size: 30px;
     padding: 5px;
     margin: 10px;
 }
 
 
-@media screen and (max-width: 768px) {
-      h1 {
-            font-size: 15px;
-      }
-      
-}
+
 
 
 /*
