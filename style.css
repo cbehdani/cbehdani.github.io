@@ -24,7 +24,7 @@ body{
 
 .jumbotron{
 /*    margin-bottom: 0px;*/
-    min-height: 600px;
+    min-height: 900px;
     
 /*    centering text in jumbotron*/
     display:flex;
