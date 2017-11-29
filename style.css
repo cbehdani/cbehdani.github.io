@@ -23,8 +23,8 @@ body{
 }
 
 .jumbotron{
-    margin-bottom: 0px;
-    min-height: 900px;
+/*    margin-bottom: 0px;*/
+    min-height: 600px;
     
 /*    centering text in jumbotron*/
     display:flex;
