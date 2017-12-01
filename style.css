@@ -120,18 +120,46 @@ aside{
     color: #0f0 !important;
     outline: solid #f00 1px !important;
 }*/
-.cloudpic{
+.cloudpic1{
     position:absolute;
-    top: -220px;
-    left:-80px;
-    animation-name: floatacross;
-    animation-duration: 3s;
+    top: -250px;
+    left:-650px;
+    animation-name: floatacrosscloud;
+    animation-duration: 40s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.cloudpic2{
+    position:absolute;
+    top: -200px;
+    left:-700px;
+    animation-name: floatacrosscloud;
+    animation-duration: 40s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.planepic1{
+    position:absolute;
+    top: 300px;
+    left:-700px;
+    max-width: 20%;
+
+    
+    animation-name: floatacrosscloud;
+    animation-duration: 18s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 
 /*Keyframes*/
 
-@keyframes floatacross{
+@keyframes floatacrosscloud{
     from{transform: translateX(0)}
-    to{transform: translateX(1000px)}
+    to{transform: translateX(2200px)}
 }
