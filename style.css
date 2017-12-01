@@ -20,6 +20,7 @@ body{
 .bodytext{
     background-color: #c9c9ad;
     overflow-x:hidden;
+    position:relative;
 }
 
 .jumbotron{
@@ -29,11 +30,18 @@ body{
 /*    centering text in jumbotron*/
     display:flex;
     align-content:center;
+    text-align: center;
     align-items:center;
-
-     
-    
+ 
 }
+
+.cloudpic{
+/*    transform: translate(400px, -75px)*/
+    transform: scaleX(1)
+}
+
+
+
 
 #mission_statement{
     font-size: 20px;
@@ -68,10 +76,37 @@ aside{
     background-color: #62b0bc;
 }
 
-.card-img-top{
+
+
+
+/*whole container*/
+.cookiecontainer{
     height:100%;
     width: 100%;
+    transition: .5s;
+    text-align: center;
+    position:relative;
 }
+
+/*image*/
+.bottompic{
+/*
+    height:100%;
+    width: 100%;
+*/
+    
+      
+    
+}
+
+
+/*text*/
+.toppic{
+    color: white;
+    
+}
+
+
 
 .card {
         margin: 0 auto; /* Added */
@@ -85,5 +120,18 @@ aside{
     color: #0f0 !important;
     outline: solid #f00 1px !important;
 }*/
+.cloudpic{
+    position:absolute;
+    top: -220px;
+    left:-80px;
+    animation-name: floatacross;
+    animation-duration: 3s;
+}
 
 
+/*Keyframes*/
+
+@keyframes floatacross{
+    from{transform: translateX(0)}
+    to{transform: translateX(1000px)}
+}
