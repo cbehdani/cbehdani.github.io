@@ -145,12 +145,12 @@ aside{
 .planepic1{
     position:absolute;
     top: 350px;
-    left:-700px;
+    left:-850px;
     max-width: 25%;
 
     
-    animation-name: floatacrosscloud;
-    animation-duration: 13s;
+    animation-name: floatacrossplane;
+    animation-duration: 12s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -162,4 +162,9 @@ aside{
 @keyframes floatacrosscloud{
     from{transform: translateX(0)}
     to{transform: translateX(2200px)}
+}
+
+@keyframes floatacrossplane{
+    from{transform: translateX(0)}
+    to{transform: translateX(2500px)}
 }
