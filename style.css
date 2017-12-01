@@ -144,9 +144,9 @@ aside{
 
 .planepic1{
     position:absolute;
-    top: 300px;
+    top: 350px;
     left:-700px;
-    max-width: 20%;
+    max-width: 25%;
 
     
     animation-name: floatacrosscloud;
