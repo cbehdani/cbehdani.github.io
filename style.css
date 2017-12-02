@@ -4,6 +4,7 @@ h1{
     font-size: 50px;
     padding: 5px;
     margin: 10px;
+    margin-top: 20px;
 }
 
 display-1{
@@ -45,15 +46,16 @@ body{
 
 .jumbotron2{
     min-height: 250px;
-    max-height: 250px;
+    max-height: 10%;
+    width: 100%;
     padding: 0px;
-    margin: 0px;
+    margin: 0px; 
 }
 
 
 .cloudpic{
 /*    transform: translate(400px, -75px)*/
-    transform: scaleX(1)
+    transform: scaleX(1);
 }
 
 
@@ -133,10 +135,22 @@ aside{
     color: #0f0 !important;
     outline: solid #f00 1px !important;
 }*/
+
+
+#wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    border; solid 1px green;
+    transition: all 1s;
+}
+
+
 .cloudpic1{
     position:absolute;
-    top: -225px;
+    top: -200px;
     left:-650px;
+    max-width: 15%;
     animation-name: floatacrosscloud;
     animation-duration: 40s;
     animation-fill-mode: forwards;
@@ -146,8 +160,9 @@ aside{
 
 .cloudpic2{
     position:absolute;
-    top: -175px;
-    left:-700px;
+    top: -155px;
+    left:-800px;
+    max-width: 15%;
     animation-name: floatacrosscloud;
     animation-duration: 40s;
     animation-fill-mode: forwards;
@@ -158,7 +173,7 @@ aside{
 .planepic1{
     position:absolute;
     top: -100px;
-    left:-850px;
+    left:-650px;
     max-width: 15%;
 
     
@@ -167,7 +182,12 @@ aside{
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    
 }
+
+
+
+
 
 .ground{
     background-color: brown;
@@ -176,24 +196,74 @@ aside{
 }
 
 .road{
-  width: 0; 
-  height: 50; 
-  text-align: center;
-  border-left: 550px solid transparent;
-  border-right: 550px solid transparent; 
-  border-bottom: 250px solid black;
+ 
+/*
+  height: 0;
+  width: 0;
     
+    
+  text-align: center;
+  border-left: 130px solid transparent;
+  border-right: 130px solid transparent; 
+  border-bottom: 250px solid black;   
   margin: 0 auto;
+    
+*/
+    
+    
 }
+
+
+.road-line-1{
+ 
+/*
+    height: 0; 
+    text-align: center; 
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent; 
+    border-bottom: 10px solid white;   
+    position: absolute;  
+    left: 49.85%;
+    top: .25%;  
+*/
+    
+/*
+    position: absolute;
+    top: 0px;
+    left: 700px;
+    width: 10px;
+*/
+}
+
+.tri{
+    width: 800px;
+    max-width:100%
+}
+
+
+
+.road-line-2{
+
+}
+
 
 /*Keyframes*/
 
 @keyframes floatacrosscloud{
+/*
     from{transform: translateX(0)}
-    to{transform: translateX(2200px)}
+    to{transform: translateX(2150px)}
+*/
+    from{left:-55%}
+    to{left:130%}
 }
 
 @keyframes floatacrossplane{
+/*
     from{transform: translateX(0)}
-    to{transform: translateX(2500px)}
+    to{transform: translateX(2150px)}
+*/
+    
+    from{left:-55%}
+    to{left:130%}
 }
