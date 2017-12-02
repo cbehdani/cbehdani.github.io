@@ -47,9 +47,16 @@ body{
 .jumbotron2{
     min-height: 250px;
     max-height: 10%;
-    width: 100%;
     padding: 0px;
     margin: 0px; 
+    
+/*
+    height: 100%;
+    width: 100%;
+*/
+    
+    
+    
 }
 
 
@@ -148,11 +155,12 @@ aside{
 
 .cloudpic1{
     position:absolute;
-    top: -200px;
-    left:-650px;
-    max-width: 15%;
+    top: -260px;
+    left:0px;
+    max-width: 10%;
+    overflow: hidden;
     animation-name: floatacrosscloud;
-    animation-duration: 40s;
+    animation-duration: 33s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -160,11 +168,12 @@ aside{
 
 .cloudpic2{
     position:absolute;
-    top: -155px;
-    left:-800px;
-    max-width: 15%;
+    top: -210px;
+    left:0px;
+    max-width: 10%;
+    overflow: hidden;
     animation-name: floatacrosscloud;
-    animation-duration: 40s;
+    animation-duration: 33s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -172,13 +181,13 @@ aside{
 
 .planepic1{
     position:absolute;
-    top: -100px;
-    left:-650px;
+    top: -160px;
+    left:0px;
     max-width: 15%;
-
+    overflow: hidden;
     
     animation-name: floatacrossplane;
-    animation-duration: 12s;
+    animation-duration: 15s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -254,8 +263,8 @@ aside{
     from{transform: translateX(0)}
     to{transform: translateX(2150px)}
 */
-    from{left:-55%}
-    to{left:130%}
+    from{left:-10%}
+    to{left:99.5%}
 }
 
 @keyframes floatacrossplane{
@@ -264,6 +273,6 @@ aside{
     to{transform: translateX(2150px)}
 */
     
-    from{left:-55%}
-    to{left:130%}
+    from{left:-15%}
+    to{left:99.5%}
 }
