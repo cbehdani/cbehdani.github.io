@@ -1,13 +1,14 @@
 h1{
-    color: black;
+    color: White;
     font-family: arial;
     font-size: 50px;
     padding: 5px;
     margin: 10px;
 }
 
-
-
+display-1{
+    text-align: center;
+}
 
 
 /*
@@ -25,15 +26,30 @@ body{
 
 .jumbotron{
 /*    margin-bottom: 0px;*/
-    min-height: 900px;
+    
     
 /*    centering text in jumbotron*/
     display:flex;
     align-content:center;
     text-align: center;
     align-items:center;
- 
+
 }
+
+.jumbotron1{
+   min-height: 675px; 
+    max-height: 675px;
+    margin:0;
+   background:#26C9FF;
+}
+
+.jumbotron2{
+    min-height: 250px;
+    max-height: 250px;
+    padding: 0px;
+    margin: 0px;
+}
+
 
 .cloudpic{
 /*    transform: translate(400px, -75px)*/
@@ -48,7 +64,8 @@ body{
 }
 
 .container{
-        text-align: center
+        text-align: center;
+/*        position: absolute;*/
 }   
 
 .menu{
@@ -94,9 +111,7 @@ aside{
     height:100%;
     width: 100%;
 */
-    
-      
-    
+   
 }
 
 
@@ -105,8 +120,6 @@ aside{
     color: white;
     
 }
-
-
 
 .card {
         margin: 0 auto; /* Added */
@@ -122,7 +135,7 @@ aside{
 }*/
 .cloudpic1{
     position:absolute;
-    top: -250px;
+    top: -225px;
     left:-650px;
     animation-name: floatacrosscloud;
     animation-duration: 40s;
@@ -133,7 +146,7 @@ aside{
 
 .cloudpic2{
     position:absolute;
-    top: -200px;
+    top: -175px;
     left:-700px;
     animation-name: floatacrosscloud;
     animation-duration: 40s;
@@ -144,9 +157,9 @@ aside{
 
 .planepic1{
     position:absolute;
-    top: 350px;
+    top: -100px;
     left:-850px;
-    max-width: 25%;
+    max-width: 15%;
 
     
     animation-name: floatacrossplane;
@@ -156,6 +169,22 @@ aside{
     animation-timing-function: linear;
 }
 
+.ground{
+    background-color: brown;
+    width: 100%;
+    position: relative;
+}
+
+.road{
+  width: 0; 
+  height: 50; 
+  text-align: center;
+  border-left: 550px solid transparent;
+  border-right: 550px solid transparent; 
+  border-bottom: 250px solid black;
+    
+  margin: 0 auto;
+}
 
 /*Keyframes*/
 
