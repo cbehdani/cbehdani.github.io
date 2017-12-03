@@ -151,6 +151,9 @@ aside{
     min-width: 40px;
 }
 
+.thanks{
+    text-align: center;
+}
 
 /*whole container*/
 .cookiecontainer{
@@ -158,15 +161,18 @@ aside{
     width: 100%;
     transition: .5s;
     text-align: center;
-    position:relative;
+/*    position:relative;*/
 }
 
 /*image*/
-.bottompic{
+.cookiepic{
+
 /*
     height:100%;
     width: 100%;
 */
+    max-width: 22%;
+    min-width: 100px;
    
 }
 
