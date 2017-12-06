@@ -207,7 +207,7 @@ aside{
 
 .cloudpic1{
     position:absolute;
-    top: 10%;
+    top: 16%;
     left:0px;
     max-width: 20%;
     overflow: hidden;
@@ -220,7 +220,7 @@ aside{
 
 .cloudpic2{
     position:absolute;
-    top: 0px;
+    top: 6%;
     left:0px;
     max-width: 20%;
     overflow: hidden;
@@ -236,7 +236,7 @@ aside{
 
 .planepic1{
     position:absolute;
-    top: 0px;
+    top: 6%;
     left:0px;
     max-width: 15%;
     min-width: 120px;
