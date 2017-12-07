@@ -1,0 +1,13 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    
+}
+.backdrop {
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(purple 10%, blue 10%, white 10%, green 10%);
+}
