@@ -15,16 +15,16 @@ html, body {
 
 
 h1{
-    color: brown;
+    color: #3B7867;
     font-family: Pacifico;
     font-size: 50px;
     padding: 5px;
     margin: 10px;
-    margin-top: 20px;
+    margin-top: 80px;
 }
 
 p{
-    color: #c9c9ad;
+    color: brown;
     
 }
 
@@ -33,7 +33,7 @@ p{
 .container{
         text-align: center;
         position: relative;
-        top: 5%;
+        top: -5%;
         height: 35%;
         width: 100%;
         color: lightgrey
@@ -41,8 +41,7 @@ p{
 
 display-1{
     text-align: center;
-    height: 80%;
-    font-size: 75px !important;
+    
     
 }
 
@@ -223,7 +222,7 @@ aside{
 
 .cloudpic1{
     position:absolute;
-    top: 25%;
+    top: 10%;
     left:0px;
     max-width: 20%;
     overflow: hidden;
@@ -236,11 +235,25 @@ aside{
 
 .cloudpic2{
     position:absolute;
-    top: 15%;
+    top: 25%;
     left:0px;
     max-width: 20%;
     overflow: hidden;
-    animation-name: floatacrosscloud;
+    animation-name: floatacrosscloud2;
+    animation-duration: 32s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+.cloudpic3{
+    position:absolute;
+    top: 20%;
+    left:-30px;
+    max-width: 20%;
+    overflow: hidden;
+    animation-name: floatacrosscloud3;
     animation-duration: 32s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
@@ -250,10 +263,21 @@ aside{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 .planepic1{
     position:absolute;
     top: 15%;
-    left:0px;
+    left: 40%;
     max-width: 15%;
     min-width: 120px;
     overflow: hidden;
@@ -336,8 +360,27 @@ aside{
     to{transform: translateX(2150px)}
 */
     from{left:-25%}
-    to{left:99.5%}
+    to{left:102.5%}
 }
+
+@keyframes floatacrosscloud2{
+/*
+    from{transform: translateX(0)}
+    to{transform: translateX(2150px)}
+*/
+    from{left:-21%}
+    to{left:106.5%}
+}
+
+@keyframes floatacrosscloud3{
+/*
+    from{transform: translateX(0)}
+    to{transform: translateX(2150px)}
+*/
+    from{left:-29%}
+    to{left:98.5%}
+}
+
 
 @keyframes floatacrossplane{
 /*
