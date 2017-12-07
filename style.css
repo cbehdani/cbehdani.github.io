@@ -13,6 +13,13 @@ html, body {
     src:url(/fonts/Pacifico.ttf)
 }
 
+p{
+    color: white;
+}
+
+li{
+    color: white;
+}
 
 h1{
     color: #3B7867;
@@ -23,10 +30,26 @@ h1{
     margin-top: 80px;
 }
 
-p{
-    color: brown;
-    
+.project-title-general{
+    color: white;
+    font-size: 7vh;
+    font-family: Pacifico;
+    margin-top: 8vh;
 }
+
+.project-title-1{
+    color: white;
+    font-size: calc(15px + 2vw);
+}
+
+.text-contents{
+    text-align: left;
+    font-size: calc(12px + .7vw);
+    width: 60%;
+    float: left;
+    margin-left:7vh;
+}
+
 
 
 
@@ -39,13 +62,16 @@ p{
         color: lightgrey
 }   
 
-display-1{
-    text-align: center;
-    
-    
+.display-1{
+    text-align: center;  
 }
 
+.picture-contents{
+    width: 30%;
+    min-width: 10%;
+    
 
+}
 
 
 header{
@@ -55,11 +81,61 @@ header{
 
 
 
-.bodytext{
-    background-color: #c9c9ad;
+.bodycontent{
+    background-color: brown;
     overflow-x:hidden;
     position:relative;
+    min-height: 110%;
+    width: 100%;
 }
+
+.projectsection{
+    background-color: #505654;
+    overflow-x:hidden;
+    position:relative;
+    height: 80%;
+    width: 93%;
+    text-align: center;
+    margin: 0 auto;
+    
+    
+    
+}
+
+.projectarea1{
+    background-color:grey;
+    overflow-x:hidden;
+    position:relative;
+    min-height: 35%;
+    max-height: 70%;
+    width: 86%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+    
+    border: 2px solid #505654;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+
+.projectarea2{
+   background-color:grey;
+    overflow-x:hidden;
+    position:relative;
+    height:30wv;
+    width: 86%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 8vh;
+    margin-bottom: 8vh; 
+    
+    border: 2px solid #505654;
+    padding: 5px;
+    border-radius: 20px;
+}
+
 
 .jumbotron{
 /*    margin-bottom: 0px;*/
@@ -134,7 +210,6 @@ header{
 }
 
 aside{
-    float: right;
     width: 120px;
     padding: 30px 0 0 40px;
 }
@@ -192,11 +267,6 @@ aside{
 }
 
 
-/*text*/
-.toppic{
-    color: white;
-    
-}
 
 .card {
         margin: 0 auto; /* Added */
@@ -222,7 +292,7 @@ aside{
 
 .cloudpic1{
     position:absolute;
-    top: 10%;
+    top: 5vh;
     left:0px;
     max-width: 20%;
     overflow: hidden;
@@ -235,7 +305,7 @@ aside{
 
 .cloudpic2{
     position:absolute;
-    top: 25%;
+    top: 9vh;
     left:0px;
     max-width: 20%;
     overflow: hidden;
@@ -249,7 +319,7 @@ aside{
 
 .cloudpic3{
     position:absolute;
-    top: 20%;
+    top: 9vh;
     left:-30px;
     max-width: 20%;
     overflow: hidden;
@@ -262,8 +332,7 @@ aside{
 
 
 
-
-
+/*heights 10% 25% 20% */
 
 
 
