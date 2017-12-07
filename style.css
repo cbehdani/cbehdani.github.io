@@ -278,8 +278,8 @@ aside{
     position:absolute;
     top: 15%;
     left: 40%;
-    max-width: 15%;
-    min-width: 120px;
+    max-width: 12%;
+    min-width: 130px;
     overflow: hidden;
     
     animation-name: floatacrossplane;
