@@ -57,7 +57,7 @@ h1{
         text-align: center;
         position: relative;
         top: -5%;
-        height: 35%;
+        height: calc(105px + 9vh);
         width: 100%;
         color: lightgrey
 }   
