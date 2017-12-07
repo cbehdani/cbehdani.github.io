@@ -1,3 +1,4 @@
+
 html, body {
     height: 100%;
     margin: 0px;
@@ -7,14 +8,27 @@ html, body {
     overflow-x: hidden;
 }
 
+@font-face{
+    font-family:Pacifico;
+    src:url(/fonts/Pacifico.ttf)
+}
+
+
 h1{
-    color: lightgray;
-    font-family: arial;
+    color: brown;
+    font-family: Pacifico;
     font-size: 50px;
     padding: 5px;
     margin: 10px;
     margin-top: 20px;
 }
+
+p{
+    color: #c9c9ad;
+    
+}
+
+
 
 .container{
         text-align: center;
