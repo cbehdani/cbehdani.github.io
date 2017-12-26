@@ -418,7 +418,7 @@ left:-34%;
 
 .cactus_2{
  position: relative;
-top:37vh;
+top:30vh;
 left:35%;    
     
  width: 8%;
@@ -428,7 +428,7 @@ left:35%;
 
 @media screen and (min-width: 680px) {
     .cactus_2{
-        top:33.5vh;
+        top:35vh;
         left: -5%;
     }
 }
