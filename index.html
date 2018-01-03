@@ -11,7 +11,7 @@
             <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
             <link rel="stylesheet" href="/style.css">
-            <script src="scroll.js"></script>
+            
     </head>
 <body>
     
@@ -33,7 +33,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#bodyscroll">My Projects</a>
+                    <a class="nav-link" href="#bodyscroll" id="mp">My Projects</a>
                   </li>
                     <li class="nav-item">
                     <a class="nav-link" href="#">About Me (In Progress)</a>
@@ -49,7 +49,7 @@
                 <img src="cloud.png" class="cloudpic1">  
                 <img src="cloud.png" class="cloudpic2">
                 <img src="cloud.png" class="cloudpic3">
-                <img src="childrens-plane-flipped-erase.png" class="planepic1">  
+                <img src="childrens-plane-flipped-erase.png" class="planepic1" id="planepic1">  
             </div>  
  
             <div class= "container">
@@ -62,7 +62,7 @@
           
           
             <div class="cactus1container">
-                <img src="cactus.png" class="cactus_1">
+                <a href="#"><img src="cactus.png" class="cactus_1" ></a>
             </div> 
           
             <div class="cactus2container">
@@ -125,7 +125,12 @@
     
    
     
+    <script>
+    $("#mp").click(function () {
+        document.alert("This image has been clicked!");
+    });
     
+    </script>
     
     
     
@@ -139,7 +144,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>    
-    
+<script type="text/javascript" src="scroll.js"></script>    
   
 </body>    
 

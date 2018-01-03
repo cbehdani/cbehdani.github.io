@@ -1,18 +1,20 @@
-
-    
-    $(document).ready(function(){
-	$('a[href^="#"]').on('click',function (e) {
-	    e.preventDefault();
-
-	    var target = this.hash;
-	    var $target = $(target);
-
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 2000, 'swing', function () {
-	        window.location.hash = target;
-	    });
-	});
+$(document).ready(function() {
+    $('#planepic1').click(function() {
+        $("#planepic1").animate({
+            top: '+=10vh'
+        }, 1000);
+        
+        
+        $("#planepic1").animate({
+            top: '-=15vh'
+        }, 1000);
+        
+        
+        $("#planepic1").animate({
+            top: '+=5vh'
+        }, 1000);
+        
+        
+        
+    });
 });
-    
-
