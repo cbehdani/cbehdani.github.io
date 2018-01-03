@@ -346,10 +346,10 @@ aside{
 
 .planepic1{
     position:absolute;
-    top: 15%;
+    top: 10%;
     left: 40%;
     max-width: 12%;
-    min-width: 130px;
+    min-width: 20vh;
     overflow: hidden;
     
     animation-name: floatacrossplane;
