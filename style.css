@@ -150,7 +150,7 @@ header{
 
 }
 
-.jumbotron1{
+.jumbotronstate1{
 /*
    min-height: 675px; 
     max-height: 675px;
@@ -159,6 +159,20 @@ header{
     margin:0;
    background:#26C9FF;
 }
+
+.jumbotronstate2{
+/*
+   min-height: 675px; 
+    max-height: 675px;
+*/
+    height: 78%;
+    margin:0;
+   background:#223947;
+}
+
+
+
+
 
 .jumbotron2{
 /*
@@ -230,9 +244,10 @@ aside{
     height: 100%;
 }
 
-.navbar-light{
+.navbar-state1{
     background-color: #62b0bc;
 }
+
 
 
 .crown{
