@@ -38,4 +38,9 @@ $(document).ready(function() {
     $("#jumbo1").toggleClass('jumbotronstate2');    
 });
     
+    
+    
+    
+    
+    
 });
