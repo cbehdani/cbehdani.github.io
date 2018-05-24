@@ -26,6 +26,21 @@ li{
 }
 
 
+
+.previousLangExperience{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.logoSize{
+    width: calc(20px + 4vw);
+    flex-basis: 20%;
+    margin: 8px;
+}
+
+
+
 h1{
     color: #3B7867;
     font-family: Pacifico;
@@ -48,15 +63,22 @@ h1{
 }
 
 .text-contents{
-    text-align: left;
-    font-size: calc(12px + .7vw);
-    width: 60%;
+    text-align: center;
+    font-size: calc(25px + .6vw);
+    width: 40%;
     float: left;
     margin-left:7vh;
 }
 
+.programmingProjects{
+    text-align: center;
+    font-size: calc(25px + .6vw);
+    width: 40%;
+    float: right;
+    margin-left:7vh;
+}
 
-
+/* for mobile, remove % and make projects float down */
 
 .container{
         text-align: center;
@@ -119,10 +141,10 @@ header{
     margin: 0 auto;
     margin-top: 8vh;
     margin-bottom: 8vh;
-    
     border: 2px solid #505654;
     padding: 5px;
     border-radius: 20px;
+    display: flex;
 }
 
 
