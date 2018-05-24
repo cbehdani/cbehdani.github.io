@@ -35,6 +35,8 @@ window.onload = function(){
     closeCategoryButton.innerHTML = "X";
     closeCategoryButton.classList.add('closeCategoryButton');
     newGradeCategory.appendChild(closeCategoryButton);
+    //break in front of button
+    newGradeCategory.appendChild(document.createElement("button"));
     //add categoryNameInputBox
     var categoryNameInputBox= document.createElement("input");
     categoryNameInputBox.placeholder = "Enter Category Name Here";
@@ -121,7 +123,6 @@ window.onload = function(){
         // }
 
         if(element.classList.contains("closeGradeBoxButton")){
-            alert("this is the close grade box button");
             console.log(element);
             console.log(element.parentNode);
             var divContainingButton = element.parentNode;
