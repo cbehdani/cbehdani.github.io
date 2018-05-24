@@ -36,7 +36,7 @@ window.onload = function(){
     closeCategoryButton.classList.add('closeCategoryButton');
     newGradeCategory.appendChild(closeCategoryButton);
     //break in front of button
-    newGradeCategory.appendChild(document.createElement("button"));
+    newGradeCategory.appendChild(document.createElement("br"));
     //add categoryNameInputBox
     var categoryNameInputBox= document.createElement("input");
     categoryNameInputBox.placeholder = "Enter Category Name Here";
