@@ -1,0 +1,52 @@
+#calculatorBody{
+    text-align: center;
+    border: 5px solid black;
+    width: 80vw;
+    margin: 0 auto;
+}
+#calculateButton{
+    margin: 30px 0;
+}
+
+#addGradeButton{
+    margin: 30px 0;
+}
+
+.gradeInputSpacing{
+    width: 35%;
+    margin: 10px 0 10px 0;
+}
+
+.categoryNameBoxSpacing{
+    margin: 10px 0;
+    text-align: center;
+}
+
+.categoryWeightBoxSpacing{
+    margin: 10px 0;
+    text-align: center;
+}
+
+.categoryBoxSize{
+    width: 200px;
+    min-height: 150px;
+    background-color: lightgrey;
+    margin: 10px;
+}
+
+#numberInputArea{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.closeCategoryButton{
+    background-color: white;
+    width: 15%;
+    float: right;
+}
+
+.closeGradeBoxButton{
+    background-color: white;
+    width: 15%;
+    margin: 10px 0 10px 0;
+}
