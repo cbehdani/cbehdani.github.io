@@ -144,7 +144,7 @@ window.onload = function(){
             var weightedSectionAverage = 0;
             var accurateGrades = 0;
             //referring to the weighted location
-            var checkingWeightPercentage = categoryDivStorage[i].childNodes[2];
+            var checkingWeightPercentage = categoryDivStorage[i].childNodes[3];
 
             if (checkingWeightPercentage.value == ""){
                 alert("Error in box " + (i + 1) + "- You have not entered a weight for this type of grade");
