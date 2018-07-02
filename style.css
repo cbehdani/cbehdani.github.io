@@ -104,6 +104,11 @@ h1{
     width: 40%;
     float: right;
     margin-left:7vw;
+    padding-bottom: 10px;
+}
+
+.projectDescription{
+    font-size: 15px;
 }
 
 @media (max-width: 550px) {
@@ -133,9 +138,27 @@ h1{
 }
 
 
+.projectItem, .logoSize {
+    transition: transform .2s;   
+}
+
+.projectItem:hover, .logoSize:hover {
+        -ms-transform: scale(1.2);
+        -webkit-transform: scale(1.2); 
+        transform: scale(1.2); 
+
+}
+
+
+
+
+
+
+
+
+
 
 /* for mobile, remove % and make projects float down */
-
 .container{
         text-align: center;
         position: relative;
@@ -151,8 +174,8 @@ h1{
 }
 
 .picture-contents{
-    width: 24%;
-    min-width: 100px;
+    width: 20%;
+    min-width: 80px;
 }
 
 
@@ -202,6 +225,8 @@ header{
     padding: 5px;
     border-radius: 20px;
 }
+
+
 
 
 .jumbotron{
