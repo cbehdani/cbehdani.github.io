@@ -151,10 +151,8 @@ h1{
 }
 
 .picture-contents{
-    width: 30%;
-    min-width: 10%;
-    
-
+    width: 24%;
+    min-width: 100px;
 }
 
 
