@@ -1,4 +1,4 @@
-
+/* general layout/fonts */
 html, body {
     height: 100%;
     margin: 0px;
@@ -8,34 +8,21 @@ html, body {
     overflow-x: hidden;
 }
 
-@font-face{
-    font-family:Pacifico;
-    src:url(/fonts/Pacifico.ttf)
+header{
+    height: 100%;
+}
+
+aside{
+    width: 120px;
+    padding: 30px 0 0 40px;
 }
 
 p{
     color: white;
 }
-
 li{
     color: white;
 }
-
-#GitHubIcon{
-    margin-right: 12px;
-}
-
-
-
-
-
-.logoSize{
-    width: calc(20px + 4vw);
-    flex-basis: 20%;
-    margin: 8px;
-}
-
-
 
 h1{
     color: #3B7867;
@@ -44,6 +31,25 @@ h1{
     padding: 5px;
     margin: 10px;
 /*    margin-top: 50px;*/
+}
+
+@font-face{
+    font-family:Pacifico;
+    src:url(/fonts/Pacifico.ttf)
+}
+
+
+/* items*/
+
+#GitHubIcon{
+    margin-right: 12px;
+}
+
+
+.logoSize{
+    width: calc(20px + 4vw);
+    flex-basis: 20%;
+    margin: 8px;
 }
 
 .project-title-general{
@@ -72,7 +78,6 @@ h1{
     border: 2px solid #505654;
     padding: 5px;
     border-radius: 20px;
-    /* display: flex; */
 }
 
 .previousLangExperience{
@@ -89,15 +94,6 @@ h1{
     margin-left:7vw;
 }
 
-
-/* .programmingProjects{
-    text-align: center;
-    font-size: calc(25px + .6vw);
-    width: 40%;
-    float: right;
-    margin-left:7vh;
-} */
-
 .programmingProjects{
     text-align: center;
     font-size: calc(25px + .6vw);
@@ -112,26 +108,18 @@ h1{
 }
 
 @media (max-width: 550px) {
-
     .text-contents{
         text-align: center;
         font-size: calc(25px + .6vw);
         width: 80%;
-        /* margin-left:3vh; */
-
-
     }
-
     .programmingProjects{
         text-align: center;
         font-size: calc(25px + .6vw);
         width: 80%;
         padding-top: 400px;
         float: none;
-
-
     }
-
     .invisHr{
         border-bottom: 1px solid #000;
     }
@@ -143,30 +131,20 @@ h1{
 }
 
 .projectItem:hover, .logoSize:hover {
-        -ms-transform: scale(1.2);
-        -webkit-transform: scale(1.2); 
-        transform: scale(1.2); 
+    -ms-transform: scale(1.2);
+    -webkit-transform: scale(1.2); 
+    transform: scale(1.2); 
 
 }
 
-
-
-
-
-
-
-
-
-
 /* for mobile, remove % and make projects float down */
 .container{
-        text-align: center;
-        position: relative;
-        top: -5%;
-        height: calc(85px + 9vh);
-/*        width: 100%;*/
-        color: lightgrey;
-        margin-top: 50px;
+    text-align: center;
+    position: relative;
+    top: -5%;
+    height: calc(85px + 9vh);
+    color: lightgrey;
+    margin-top: 50px;
 }   
 
 .display-1{
@@ -177,14 +155,6 @@ h1{
     width: 20%;
     min-width: 80px;
 }
-
-
-header{
-    height: 100%;
-}
-
-
-
 
 .bodycontent{
     background-color: brown;
@@ -202,13 +172,7 @@ header{
     width: 93%;
     text-align: center;
     margin: 0 auto;
-    
-    
-    
 }
-
-
-
 
 .projectarea2{
    background-color:grey;
@@ -226,79 +190,34 @@ header{
     border-radius: 20px;
 }
 
-
-
-
 .jumbotron{
-/*    margin-bottom: 0px;*/
-    
-    
-/*    centering text in jumbotron*/
     display:flex;
     align-content:center;
     text-align: center;
     align-items:center;
-
 }
 
 .jumbotronstate1{
-/*
-   min-height: 675px; 
-    max-height: 675px;
-*/
     height: 78%;
     margin:0;
-   background:#26C9FF;
+    background:#26C9FF;
 }
 
 .jumbotronstate2{
-/*
-   min-height: 675px; 
-    max-height: 675px;
-*/
     height: 78%;
     margin:0;
-   background:#223947;
+    background:#223947;
 }
 
-
-
-
-
 .jumbotron2{
-/*
-    min-height: 250px;
-    max-height: 10%;
-*/
     height: 25%;
     padding: 0px;
     margin: 0px; 
-    
-/*
-    height: 100%;
-    width: 100%;
-*/
-    
-    
-    
 }
-
-
-/*
-.cloudpic{
-    transform: translate(400px, -75px) 
-    transform: scaleX(1); 
-}
-*/
-
-
-
 
 #mission_statement{
     font-size: 20px;
 }
-
-
 
 .menu{
     background: #3B7867;
@@ -315,22 +234,6 @@ header{
     color: grey;
 }
 
-aside{
-    width: 120px;
-    padding: 30px 0 0 40px;
-}
-
-/*
-.navbar-custom{
-    background-color: #62b0bc;
-   
-    This caused positioning problems
-    height: 9%;
-    Using navbar-light as the background color attribute changer now
-
-}
-*/
-
 .navbar-brand{
     height: 100%;
 }
@@ -338,8 +241,6 @@ aside{
 .navbar-state1{
     background-color: #62b0bc;
 }
-
-
 
 .crown{
     height: 85%;
@@ -352,42 +253,23 @@ aside{
     text-align: center;
 }
 
-/*whole container*/
 .cookiecontainer{
     height:100%;
     width: 100%;
     transition: .5s;
     text-align: center;
-/*    position:relative;*/
 }
 
-/*image*/
 .cookiepic{
-
-/*
-    height:100%;
-    width: 100%;
-*/
     max-width: 22%;
     min-width: 100px;
-   
 }
-
-
 
 .card {
-        margin: 0 auto; /* Added */
-        float: none; /* Added */
-        margin-bottom: 10px; /* Added */
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
 }
-
-/* neon red to troubleshoot
-* {
-    background: #000 !important;
-    color: #0f0 !important;
-    outline: solid #f00 1px !important;
-}*/
-
 
 #wrapper {
     position: absolute;
@@ -395,7 +277,6 @@ aside{
     height: 55%;
     transition: all 1s;
 }
-
 
 .cloudpic1{
     position:absolute;
@@ -423,7 +304,6 @@ aside{
     animation-timing-function: linear;
 }
 
-
 .cloudpic3{
     position:absolute;
     top: 9vh;
@@ -436,19 +316,6 @@ aside{
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
-
-
-
-/*heights 10% 25% 20% */
-
-
-
-
-
-
-
-
-
 
 .planepic1{
     position:absolute;
@@ -463,75 +330,43 @@ aside{
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    
 }
-
-
-
-
 
 .ground{
     background-color: brown;
     width: 100%;
-/*    position: relative;*/
 }
 
 .road{
-  height: 100%;
-/*
-  height: 0;
-  width: 0;
-    
-    
-  text-align: center;
-  border-left: 130px solid transparent;
-  border-right: 130px solid transparent; 
-  border-bottom: 250px solid black;   
-  margin: 0 auto;
-    
-*/
-    
-    
+  height: 100%; 
 }
-
-
-
 
 .tri{
     width: 800px;
-    max-width:100%
-        
+    max-width:100%    
 }
-
 
 .cactus1container{
     position: absolute;
 }
 
 .cactus_1{
- position: relative;
+position: relative;
 top:30vh;
 left:-34%;    
-    
- width: 23%;
- 
+width: 23%;
 }
-
-
 
 .cactus2container{
     position: absolute;
 }
 
 .cactus_2{
- position: relative;
+position: relative;
 top:36vh;
 left:35%;    
-    
- width: 8%;
- 
+width: 8%;
 }
-
 
 @media (min-width: 680px) {
     .cactus_2{
@@ -539,51 +374,25 @@ left:35%;
         left: -10%;
     }
 }
-
-
-
-
 /*Keyframes*/
 
 @keyframes floatacrosscloud{
-/*
-    from{transform: translateX(0)}
-    to{transform: translateX(2150px)}
-*/
     from{left:-25%}
     to{left:102.5%}
 }
 
 @keyframes floatacrosscloud2{
-/*
-    from{transform: translateX(0)}
-    to{transform: translateX(2150px)}
-*/
     from{left:-21%}
     to{left:106.5%}
 }
 
 @keyframes floatacrosscloud3{
-/*
-    from{transform: translateX(0)}
-    to{transform: translateX(2150px)}
-*/
     from{left:-29%}
     to{left:98.5%}
 }
 
 
 @keyframes floatacrossplane{
-/*
-    from{transform: translateX(0)}
-    to{transform: translateX(2150px)}
-*/
-    
     from{left:-35%}
     to{left:99.5%}
 }
-
-
-
-
-
