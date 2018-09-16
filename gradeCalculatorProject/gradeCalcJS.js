@@ -31,10 +31,23 @@ window.onload = function(){
     console.log(categoryDivStorage);
 
     //add closeCategoryButton
+
     var closeCategoryButton = document.createElement("button");
     closeCategoryButton.innerHTML = "X";
     closeCategoryButton.classList.add('closeCategoryButton');
     newGradeCategory.appendChild(closeCategoryButton);
+
+    //may not need this, fixed x button margin
+    // var toolbarArea = document.createElement("div");
+    // toolbarArea.classList.add("toolbarArea");
+
+    // var closeCategoryButton = document.createElement("button");
+    // closeCategoryButton.innerHTML = "X";
+    // closeCategoryButton.classList.add('closeCategoryButton');
+    // toolbarArea.appendChild(closeCategoryButton);
+    // newGradeCategory.appendChild(toolbarArea);    
+
+
     //break in front of button
     newGradeCategory.appendChild(document.createElement("br"));
     //add categoryNameInputBox
