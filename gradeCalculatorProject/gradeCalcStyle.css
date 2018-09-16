@@ -82,3 +82,11 @@ h1{
 .toolbarArea{
     padding-bottom: 2px;
 }
+
+@media only screen and (max-width: 549px){
+
+
+    .categoryBoxSize{
+        margin-left: 16vw;
+    }
+}
