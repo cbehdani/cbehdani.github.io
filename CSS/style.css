@@ -86,6 +86,9 @@ h1{
     flex-wrap: wrap;
 } 
 
+.previousTechnologyExperience{
+}
+
 .text-contents{
     text-align: center;
     font-size: calc(25px + .6vw);
@@ -352,9 +355,12 @@ h1{
 
 .cactus_1{
 position: relative;
-top:30vh;
+/* top:30vh;
 left:-34%;    
-width: 23%;
+width: 23%; */
+top:30vh;
+height: 29vh;
+left: 3%;
 }
 
 .cactus2container{

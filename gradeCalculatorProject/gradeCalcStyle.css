@@ -38,6 +38,10 @@ h1{
     margin-bottom: 10px;
 }
 
+#helpButton{
+    border-radius: 10px;
+}
+
 .gradeInputSpacing{
     width: 35%;
     margin: 10px 0 10px 0;
@@ -83,10 +87,13 @@ h1{
     padding-bottom: 2px;
 }
 
+
+
+
 @media only screen and (max-width: 549px){
 
 
     .categoryBoxSize{
-        margin-left: 16vw;
+        margin-left: 8vw;
     }
 }
