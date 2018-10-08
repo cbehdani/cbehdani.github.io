@@ -122,7 +122,7 @@ h1{
 }
 
 .bioBody{
-
+    text-align: center;
 }
 
 .bioText{
@@ -130,11 +130,30 @@ h1{
     float: left;
     width: 50%;
     color: white;
+    margin-right: 20px;
 }
 
 .bioImage{
-float: left;
-width: 50%;
+/* float: right; */
+/* width: 50%; */
+}
+
+#myHeadshot{
+    margin-top: 20px;
+}
+
+/* this isnt working */
+@media (max-width: 675px){
+    .bioText{
+        margin-left: 17vw;
+        width: 105%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    body{
+        color: blue;
+    }
 }
 
 .previousLangExperience{
@@ -171,7 +190,7 @@ width: 50%;
     .text-contents{
         text-align: center;
         font-size: calc(25px + .6vw);
-        width: 80%;
+        width: 100%;
     }
     .programmingProjects{
         text-align: center;
