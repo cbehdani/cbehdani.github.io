@@ -59,7 +59,6 @@ h1{
     color: white;
     font-size: 7vh;
     font-family: Pacifico;
-    margin-top: 8vh;
 }
 
 .project-title-1{
@@ -111,7 +110,7 @@ h1{
      width: 86%;
      text-align: center;
      margin: 0 auto;
-     margin-top: 8vh;
+     margin-top: 800px;
      margin-bottom: 8vh; 
      
      border: 2px solid #505654;
@@ -145,47 +144,68 @@ h1{
 }
 
 #myHeadshot{
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 /* this isnt working */
-@media (max-width: 675px){
+
+
+#previousLangExperience{
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
+    float:left;
+    width: 45%;
+    margin-left: 20px;
+} 
+
+#previousTechnologyExperience{
+    float: right;
+    width:45%;
+    margin-right: 20px;
+}
+
+
+
+@media (max-width: 692px){
     .bioText{
         margin-left: 17vw;
         width: 105%;
         margin-left: 0;
         margin-right: 0;
     }
-    
-    body{
-        color: blue;
+    #myHeadshot{
+        margin-top:20px;
+    }
+    #previousLangExperience{
+        float:left;
+        width: 100%;
+        margin-left: 0;
+    } 
+    #previousTechnologyExperience{
+        float: center;
+        width: 100%;
+        border-top: 1px grey solid;
+        margin-right: 0;
     }
 }
 
-.previousLangExperience{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-} 
-
-.previousTechnologyExperience{
-}
-
-.text-contents{
+/* .text-contents{
     text-align: center;
     font-size: calc(25px + .6vw);
     width: 40%;
     float: left;
     margin-left:7vw;
-}
+} */
 
 .programmingProjects{
     text-align: center;
     font-size: calc(25px + .6vw);
     width: 40%;
-    float: right;
+    float: center;
     margin-left:7vw;
     padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .projectDescription{
@@ -259,16 +279,21 @@ h1{
     margin: 0 auto;
 
     padding: 100px 0px;
-  background-image: linear-gradient(to bottom, white 50%, rgba(255, 0, 0, 0) 0%);
-  background-position: 48.5% 50%;
-  background-size: 2.75% 200px;
-  /* background-size: 3.5vw 150px; */
-
-  /* 14 to 24vw */
-  background-repeat: repeat-y;
-  border-top: grey 1px solid;
+    background-image: linear-gradient(to bottom, white 50%, rgba(255, 0, 0, 0) 0%);
+    background-position: 48.5% 50%;
+    background-size: 3.5vw 200px;
+    /* background-size: 3.5vw 150px; */
+    /* 14 to 24vw */
+    background-repeat: repeat-y;
+    border-top: grey 1px solid;
 }
 
+@media(min-width: 800px ){
+    .projectsection{
+        background-size: 1.8% 200px;
+        background-position: 49% 50%;
+    }
+}
 
 
 .jumbotron{
