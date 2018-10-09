@@ -57,7 +57,7 @@ h1{
 
 .project-title-general{
     color: white;
-    font-size: 7vh;
+    font-size: 6vh;
     font-family: Pacifico;
 }
 
@@ -200,12 +200,16 @@ h1{
 
 .programmingProjects{
     text-align: center;
-    font-size: calc(25px + .6vw);
-    width: 40%;
+    color: white;
+    width: 100%;
     float: center;
-    margin-left:7vw;
     padding-bottom: 10px;
     padding-top: 10px;
+}
+
+#projectTitle{
+    font-size: 6vh;
+    font-family: Pacifico;
 }
 
 .projectDescription{
@@ -220,9 +224,7 @@ h1{
     }
     .programmingProjects{
         text-align: center;
-        font-size: calc(25px + .6vw);
-        width: 80%;
-        padding-top: 400px;
+        /* padding-top: 400px; */
         float: none;
     }
     .invisHr{
@@ -231,16 +233,45 @@ h1{
 }
 
 
-.projectItem, .logoSize {
+.logoSize {
     transition: transform .2s;   
 }
+.logoSize:hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1); 
+    transform: scale(1.1); 
+} 
 
-.projectItem:hover, .logoSize:hover {
-    -ms-transform: scale(1.2);
-    -webkit-transform: scale(1.2); 
-    transform: scale(1.2); 
-
+#projectBody{
+    display: flex;
+    flex-wrap: wrap;
 }
+.projectItem{
+    width:33.33%;
+    /* overflow-y:scroll; */
+    background-color: #505654;
+    min-height:250px;
+    border:5px dashed white;
+}
+
+@media(max-width: 1300px ){
+    .projectItem{
+        width:49.75%;
+    }
+}
+
+@media(max-width: 800px ){
+    .projectItem{
+        width:99.5%;
+
+    }
+}
+
+.projectTextHeader{
+    font-family: Pacifico;
+    font-size: 28px;
+}
+
 
 /* for mobile, remove % and make projects float down */
 .container{
