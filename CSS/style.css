@@ -66,7 +66,9 @@ h1{
     font-size: calc(15px + 2vw);
 }
 
-.projectarea1{
+
+
+#projectarea1{
     background-color:grey;
     overflow-x:hidden;
     position:relative;
@@ -75,48 +77,44 @@ h1{
     width: 86%;
     text-align: center;
     margin: 0 auto;
-    /* margin-top: 8vh; */
-    margin-top: 800px;
     margin-bottom: 8vh;
-    /* margin-left: 5vw;
-    margin-right: 5vw; */
-    border: 2px solid #505654;
     padding: 5px;
     border-radius: 20px;
     padding: 20px 30px 20px 30px;
 }
 
-.projectarea2{
+#projectarea2{
     background-color:grey;
     overflow-x:hidden;
     position:relative;
-    min-height: 35%;
+    min-height: 45%;
     max-height: 70%;
     width: 86%;
     text-align: center;
     margin: 0 auto;
-    margin-top: 800px;
     margin-bottom: 8vh;
-    border: 2px solid #505654;
     padding: 5px;
     border-radius: 20px;
+    
 }
 
-.projectarea3{
+#projectarea3{
     background-color:grey;
-     overflow-x:hidden;
-     position:relative;
-     height:30wv;
-     width: 86%;
-     text-align: center;
-     margin: 0 auto;
-     margin-top: 800px;
-     margin-bottom: 8vh; 
-     
-     border: 2px solid #505654;
-     padding: 5px;
-     border-radius: 20px;
+    overflow-x:hidden;
+    position:relative;
+    height:30wv;
+    width: 86%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 8vh; 
+    padding: 5px;
+    border-radius: 20px;
  }
+
+.projectArea{
+    border: .5px solid black;
+    margin-top: 1600px !important;
+}
 
 .bioHeader{
     font-size: 6vh;
@@ -165,6 +163,10 @@ h1{
     margin-right: 20px;
 }
 
+#spacing{
+    display:block;
+    clear: both;
+}
 
 
 @media (max-width: 692px){
@@ -190,13 +192,7 @@ h1{
     }
 }
 
-/* .text-contents{
-    text-align: center;
-    font-size: calc(25px + .6vw);
-    width: 40%;
-    float: left;
-    margin-left:7vw;
-} */
+
 
 .programmingProjects{
     text-align: center;
@@ -537,16 +533,33 @@ width: 8%;
     to{left:99.5%}
 }
 
-.scrollTestc{
+.scrollArrowDown{
     animation: yRotate 5s linear infinite;
-    transform: rotate(30deg);
+
 }
+
+/* .scrollArrowDown:hover{
+    animation: yRotate 3s linear infinite;
+} */
+
+.scrollArrowUp{
+    animation: yRotate 3s linear infinite;
+}
+
+
 
 @keyframes yRotate {
     0% {
-      transform: rotateY(0);
+      transform: rotateY(0) translateY(0px);
+    }
+    50%{
+        transform: rotateY(180deg) translateY(15px);
     }
     100% {
-      transform: rotateY(360deg);
+      transform: rotateY(360deg) translateY(0px);
     }
   }
+
+#ranorexLogo{
+    position: relative;
+}
