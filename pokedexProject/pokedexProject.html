@@ -7,6 +7,10 @@
     <title>Pokedex Project</title>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="jsFile.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+
 </head>
 <body>
     <div id="title">
@@ -18,6 +22,54 @@
             <div id="pokedexScreen">
                 <ul id="listOfPokemon">
                 </ul>
+            </div>
+            <div id="indivPokeEntry">
+                <div id="entryLeftCol">
+                    <i class="fas fa-arrow-circle-left"></i>                <div id="entryHeader">
+                            <span id="EntryId">#1</span>
+                            <span id="EntryName">Bulbasaur</span>
+                        </div>
+                        <img id="entryImage"src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="">
+                        <div id="entryMeasurements">
+                            <p id="entryHeight">
+                                Height: <span id="EntryHeightVal">100</span> ft
+                            </p>
+                            <p id="entryWeight">
+                                Weight: <span id="EntryWeightVal">230</span> lb
+                            </p>
+                        </div>
+                        <div id="entryAbilities">
+                            <ul id="abilityList">
+                                <li id="abilityTitle">Abilities:</li>
+                                <li class="abilityItem">Overgrow</li>
+                                <li class="abilityItem">Chlorophyll</li>
+                                <li class="abilityItem">Addit. Abil</li>
+                            </ul>
+                        </div>
+                </div>
+                <div id="entryRightCol">
+                    <div id="entryType">
+                        <p id="typeLabel"> Type</p>
+                        <div id="type1" class="type">
+                            Grass
+                        </div>
+                        <div id="type2" class="type">
+                            Poison
+                        </div>
+                    </div>
+                    <div id="entryStats">
+                        <p>Stats:</p>
+                        <p>HP: <span>45</span></p>
+                        <p>Attack: <span>45</span></p>
+                        <p>Defense: <span>495</span></p>
+                        <p>Sp. Att: <span>65</span></p>
+                        <p>Sp. Def: <span>65</span></p>
+                        <p>Speed: <span>45</span></p>
+                    </div>
+                </div>
+
+
+                
             </div>
         </div>
     </div>

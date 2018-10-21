@@ -1,3 +1,7 @@
+*{
+    font-family: 'Orbitron', sans-serif;
+}
+
 body{
     margin: 0;
 }
@@ -23,8 +27,8 @@ ul{
 
 }
 #pokedexScreen{
-    position: absolute;
-    height:256px;
+    /* position: absolute; */
+    height:257px;
     width: 252px;
     background-color: lightgrey;
     top: -339px;
@@ -47,4 +51,87 @@ ul{
     font-size: 11.5px;
     height:50px;
     border-radius: 1.5px;
+}
+
+#indivPokeEntry{
+    height: 257px;
+    width: 252px;
+    background-color: lightgrey;
+    position: absolute;
+    top: 180px;
+    left: 400px;
+    font-size: 13.4px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+#entryLeftCol{
+    float:left;
+}
+
+#entryRightCol{
+    /* float: right; */
+    /* text-align: left; */
+    margin-left: 125px;
+    margin-top: 16px;
+}
+
+/* #entryId, #entryHeader{
+    display: inline-block;;
+} */
+
+#entryImage{
+    border: 2px black solid;
+    display: block;
+}
+
+#entryHeight, #entryWeight{
+    margin: 4px 0px;
+}
+
+#abilityList{
+    list-style: none;
+}
+
+.abilityItem{
+    margin-left: 15px;
+}
+
+#entryType{
+    margin-left:30px;
+}
+
+#typeLabel{
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+.type{
+    height: 20px;
+    width: 50px;
+    background-color: white;
+    border: 1px solid black;
+    margin-bottom: 5px;
+    text-align: center;
+    color: white;
+}
+
+#type1{
+    background-color: green;
+}
+
+#type2{
+    background-color: purple;
+}
+
+#entryStats{
+    margin-top: 12px;
+}
+
+#entryStats > *{
+    margin: 3px 0px;
+}
+
+#entryStats p:nth-child(n+2){
+    margin-left: 15px;
 }
