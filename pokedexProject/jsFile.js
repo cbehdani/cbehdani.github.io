@@ -148,6 +148,7 @@ window.onload = function(){
             //play pokemon sound, only goes to 721/Volcanion currently
             var pokeSound = new Audio();
             pokeSound.src = "https://veekun.com/dex/media/pokemon/cries/" + data2.id +".ogg";
+            pokeSound.volume = .2;
             pokeSound.play();
 
             }

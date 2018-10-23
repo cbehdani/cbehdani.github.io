@@ -3,7 +3,7 @@
 }
 
 body{
-    margin: 0;
+    /* margin: 0; */
 }
 ul{
     margin: 0;
@@ -18,27 +18,38 @@ ul{
     height: 800px;
     width: 100%;
     min-width: 92px;
+    /* text-align: center; */
+
+}
+
+#pokedex{
+    background-image: url(/pokedexProject/images/pokedexFrame.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    padding-bottom: 200px;
 }
 
 #pokedexFrame{
-    position: relative;
+    /* position: relative;
     text-align: center;
-    margin: auto;
+    margin: auto 0;
+    margin-left: 50%;
+    margin-right: 50%; */
 
 }
 #pokedexScreen{
-    /* position: absolute; */
+    position: relative;
     height:257px;
     width: 252px;
     background-color: lightgrey;
-    top: -339px;
-    left: 21px;
-    /* left:332px; */
+    left: -18px;
+    top:111px;
     position: relative;
     overflow: scroll;
     overflow-x: hidden;
+    
     /* overflow-y: hidden; */
-    /* margin: auto; */
+    margin: auto;
     
 }
 ::-webkit-scrollbar {display:none;}
@@ -53,29 +64,33 @@ ul{
     border-radius: 1.5px;
 }
 
-.pokemonOnList:hover{
-    background-color: white;
-    /* padding-top: 10px;
-    padding-bottom: 10px; */
-    /* height: 52px; */
-
+@media only screen and (min-width: 1000px){
+    .pokemonOnList:hover{
+        background-color: white;
+    
+    }
 }
 
 #indivPokeEntry{
     height: 254px;
     width: 244px;
     background-color: lightgrey;
-    position: absolute;
+    position: relative;
     /* to the side for debugging 
     top: 180px;
     left: 400px; */
-    top: 196px;
-    left: 20px;
+    /* top: 196px;
+    left: 20px; */
     font-size: 13.4px;
     padding-left: 10px;
     padding-top: 4px;
     display: none;
     /* border: 1px solid black; */
+
+    top: -146px;
+    left: -18px;
+    margin: auto;
+
 }
 
 #entryLeftCol{
