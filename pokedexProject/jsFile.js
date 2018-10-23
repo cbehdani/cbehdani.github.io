@@ -62,8 +62,20 @@ window.onload = function(){
             entryName.innerHTML = data2.name;
 
             let entryImage = document.getElementById("entryImage");
-            entryImage.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + data2.id + ".png";
+            //regular images
+            // entryImage.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + data2.id + ".png";
+            
+            //3d images - all dont exist
+            entryImage.src = "http://play.pokemonshowdown.com/sprites/xyani/" + data2.name +  ".gif";
 
+            //3d, if not then regular
+            let tempString = "http://play.pokemonshowdown.com/sprites/xyani/" + data2.name +  ".gif";
+            entryImage.onerror = function(){
+                console.log("Couldn't find 3d image");
+                entryImage.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + data2.id + ".png";
+            }
+            
+            
 
             let entryHP = document.getElementById("entryHP");
             let entryAttack = document.getElementById("entryAttack");
