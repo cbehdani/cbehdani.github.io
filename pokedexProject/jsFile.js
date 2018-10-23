@@ -4,15 +4,15 @@ window.onload = function(){
 
     pokedexListEntryRequest.onload = function(){
         let data1 = JSON.parse(this.response);
-        console.log(data1);
-        console.log(typeof data1);
-        console.log(data1.results);
+        // console.log(data1);
+        // console.log(typeof data1);
+        // console.log(data1.results);
 
         let arrayOfPokemon = data1.results;
 
         // console.log(data.results.length);
 
-        var ulList = document.getElementById("listOfPokemon");
+        var listOfPokemon = document.getElementById("listOfPokemon");
 
         // for (let i = 0; i < data.results.length; i++){
         for (let i = 0; i < 802; i++){
@@ -33,7 +33,7 @@ window.onload = function(){
             pokemonImage.style.cssFloat = "right";
             pokemonli.append(pokemonImage);
 
-            ulList.append(pokemonli);
+            listOfPokemon.append(pokemonli);
             
             // console.log(data.results[i].name);
             
@@ -41,19 +41,19 @@ window.onload = function(){
 
         //when clicking on an entry
         var pokemonEntries = document.getElementsByClassName('pokemonOnList');
-        console.log(pokemonEntries.length + "outside");
+        // console.log(pokemonEntries.length + "outside");
         for (let i = 0; i<pokemonEntries.length; i++) {
             pokemonEntries[i].onclick = function () {
 
-            let indivPokeInfo = document.getElementById("indivPokeEntry");
-            console.log(this.getAttribute("pokeNum"));
+
+            // console.log(this.getAttribute("pokeNum"));
             var pokedexListImageRequest = new XMLHttpRequest();
 
             // pokedexListEntryRequest.open('GET', "https://pokeapi.co/api/v2/pokemon/1/", true);
             pokedexListEntryRequest.open('GET', "https://pokeapi.co/api/v2/pokemon/" + this.getAttribute("pokeNum") + "/", true);
 
             pokedexListEntryRequest.onload = function(){
-            let data2 = JSON.parse(this.response);
+            var data2 = JSON.parse(this.response);
 
             let entryId = document.getElementById("entryId");
             entryId.innerHTML = data2.id;
@@ -64,12 +64,7 @@ window.onload = function(){
             let entryImage = document.getElementById("entryImage");
             entryImage.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + data2.id + ".png";
 
-            // let pokemonNameDiv = document.createElement('div');
-            // let pokemonNameP = document.createElement('p');
-            // pokemonNameP.innerHTML = data2.name;
 
-            // pokemonNameDiv.append(pokemonNameP);
-            // indivPokeInfo.append(pokemonNameDiv);
             let entryHP = document.getElementById("entryHP");
             let entryAttack = document.getElementById("entryAttack");
             let entryDefense = document.getElementById("entryDefense");
@@ -84,19 +79,119 @@ window.onload = function(){
             entrySpDef.innerHTML = data2.stats[1].base_stat;
             entrySpeed.innerHTML = data2.stats[0].base_stat;
 
+
             let entryHeightVal = document.getElementById("entryHeightVal");
             let entryWeightVal = document.getElementById("entryWeightVal")
             entryHeightVal.innerHTML = data2.height / 10;
             entryWeightVal.innerHTML = data2.weight / 10;
+
+            let abilityList = document.getElementById("abilityList");
+            let abilityItem = document.getElementsByClassName("abilityItem");
+            while (abilityItem[0]) {
+                abilityItem[0].parentNode.removeChild(abilityItem[0]);
+            }
+
+            for (let i = 0; i < data2.abilities.length; i++){
+                let abilityToBeAdded = document.createElement("li");
+                abilityToBeAdded.innerHTML = data2.abilities[i].ability.name;
+                abilityToBeAdded.classList.add("abilityItem"); 
+                abilityList.appendChild(abilityToBeAdded);
+            }
+
+            //deleting and determining new entry type
+            let entryType = document.getElementById("entryType");
+            let type = document.getElementsByClassName("type");
+            while (type[0]) {
+                entryType.removeChild(type[0]);
+            }
+
+            //1 vs 2 types
+            if (data2.types.length == 1){
+                let type1 = document.createElement("div");
+                type1.id = "type1";
+                type1.classList.add("type");
+                type1.innerHTML = data2.types[0].type.name;
+                type1.style.backgroundColor = (String) (typeColor(type1.innerHTML));
+                entryType.appendChild(type1);
+            }
+            else{ //2 types
+                let type1 = document.createElement("div");
+                type1.id = "type1";
+                type1.classList.add("type");
+                type1.innerHTML = data2.types[0].type.name;
+                type1.style.backgroundColor = (String) (typeColor(type1.innerHTML));
+                entryType.appendChild(type1);
+                let type2 = document.createElement("div");
+                type2.id = "type2";
+                type2.classList.add("type");
+                type2.innerHTML = data2.types[1].type.name;
+                type2.style.backgroundColor = (String) (typeColor(type2.innerHTML));
+                entryType.appendChild(type2);
+            }
+
+            let indivPokeEntry = document.getElementById("indivPokeEntry");
+            indivPokeEntry.style.display = "block";
+            listOfPokemon.style.pointerEvents = "none";
             }
             pokedexListEntryRequest.send()
+
+            
             };
         }
 
+        var backButton= document.getElementById("backButton");
+        backButton.onclick = function(){
+            indivPokeEntry.style.display = "none";
+            listOfPokemon.style.pointerEvents = "auto";
+        }
     }
     pokedexListEntryRequest.send()
 
-        
+    function typeColor(type){
+        switch(type){
+            case "normal":
+                return "#A8A878";
+            case "fighting":
+                return "#C03028";
+            case "flying":
+                return "#A890F0";
+            case "poison":
+                return "#A040A0";
+            case "ground":
+                return "#E0C068";
+            case "rock":
+                return "#B8A038";
+            case "bug":
+                return "#A8B820";
+            case "ghost":
+                return "#705898";
+            case "steel":
+                return "#B8B8D0";
+            case "fire":
+                return "#F08030";
+            case "water":
+                return "#6890F0";
+            case "grass":
+                return "#78C850";
+            case "electric":
+                return "#F8D030";
+            case "psychic":
+                return "#F85888";
+            case "ice":
+                return "#98D8D8";
+            case "dragon":
+                return "#7038F8";
+            case "dark":
+                return "#705848";
+            case "fairy":
+                return "#EE99AC";
+            default:
+                console.log("type not found");
+                break;
+
+        } 
+    }   
+
 
     
 }

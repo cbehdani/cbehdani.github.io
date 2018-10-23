@@ -47,7 +47,7 @@ ul{
     padding: 10px 15px 0px 5px;
     margin-right: 20px;    
     border: 1px black solid;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 11.5px;
     height:50px;
     border-radius: 1.5px;
@@ -57,20 +57,25 @@ ul{
     background-color: white;
     /* padding-top: 10px;
     padding-bottom: 10px; */
-    height: 52px;
+    /* height: 52px; */
 
 }
 
 #indivPokeEntry{
-    height: 257px;
-    width: 252px;
+    height: 254px;
+    width: 244px;
     background-color: lightgrey;
     position: absolute;
+    /* to the side for debugging 
     top: 180px;
-    left: 400px;
+    left: 400px; */
+    top: 196px;
+    left: 20px;
     font-size: 13.4px;
     padding-left: 10px;
     padding-top: 4px;
+    display: none;
+    /* border: 1px solid black; */
 }
 
 #entryLeftCol{
@@ -85,7 +90,7 @@ ul{
 }
 
 #entryName{
-    text-transform: uppercase;
+    text-transform: capitalize;
     /* overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto; */
@@ -110,33 +115,37 @@ ul{
 
 .abilityItem{
     margin-left: 15px;
+    text-transform: capitalize;
 }
 
 #entryType{
-    margin-left:30px;
+    margin-left:25px;
 }
 
 #typeLabel{
     margin: 0px;
     margin-bottom: 5px;
+    margin-left: 6px;
 }
 
 .type{
-    height: 20px;
+    height: 16px;
     width: 50px;
     background-color: white;
     border: 1px solid black;
     margin-bottom: 5px;
     text-align: center;
     color: white;
+    text-transform: uppercase;
+    font-size: 10px;
 }
 
 #type1{
-    background-color: green;
+    /* background-color: green; */
 }
 
 #type2{
-    background-color: purple;
+    /* background-color: purple; */
 }
 
 #entryStats{
