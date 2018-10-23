@@ -53,6 +53,14 @@ ul{
     border-radius: 1.5px;
 }
 
+.pokemonOnList:hover{
+    background-color: white;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
+    height: 52px;
+
+}
+
 #indivPokeEntry{
     height: 257px;
     width: 252px;
@@ -62,7 +70,7 @@ ul{
     left: 400px;
     font-size: 13.4px;
     padding-left: 10px;
-    padding-top: 10px;
+    padding-top: 4px;
 }
 
 #entryLeftCol{
@@ -72,17 +80,24 @@ ul{
 #entryRightCol{
     /* float: right; */
     /* text-align: left; */
-    margin-left: 125px;
-    margin-top: 16px;
+    margin-left: 130px;
+    margin-top: 32px;
 }
 
-/* #entryId, #entryHeader{
-    display: inline-block;;
-} */
+#entryName{
+    text-transform: uppercase;
+    /* overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto; */
+
+}
+
 
 #entryImage{
     border: 2px black solid;
     display: block;
+    width: 100px;
+    height: 100px;
 }
 
 #entryHeight, #entryWeight{

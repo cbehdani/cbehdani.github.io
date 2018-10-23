@@ -54,16 +54,40 @@ window.onload = function(){
 
             pokedexListEntryRequest.onload = function(){
             let data2 = JSON.parse(this.response);
-            console.log(data2.name + " is my response");
 
-            let pokemonNameDiv = document.createElement('div');
-            let pokemonNameP = document.createElement('p');
-            pokemonNameP.innerHTML = data2.name;
-            pokemonNameDiv.append(pokemonNameP);
-            indivPokeInfo.append(pokemonNameDiv);
+            let entryId = document.getElementById("entryId");
+            entryId.innerHTML = data2.id;
 
+            let entryName = document.getElementById("entryName");
+            entryName.innerHTML = data2.name;
 
+            let entryImage = document.getElementById("entryImage");
+            entryImage.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + data2.id + ".png";
 
+            // let pokemonNameDiv = document.createElement('div');
+            // let pokemonNameP = document.createElement('p');
+            // pokemonNameP.innerHTML = data2.name;
+
+            // pokemonNameDiv.append(pokemonNameP);
+            // indivPokeInfo.append(pokemonNameDiv);
+            let entryHP = document.getElementById("entryHP");
+            let entryAttack = document.getElementById("entryAttack");
+            let entryDefense = document.getElementById("entryDefense");
+            let entrySpAtt = document.getElementById("entrySpAtt");
+            let entrySpDef = document.getElementById("entrySpDef");
+            let entrySpeed = document.getElementById("entrySpeed");
+            
+            entryHP.innerHTML = data2.stats[5].base_stat;
+            entryAttack.innerHTML = data2.stats[4].base_stat;
+            entryDefense.innerHTML = data2.stats[3].base_stat;
+            entrySpAtt.innerHTML = data2.stats[2].base_stat;
+            entrySpDef.innerHTML = data2.stats[1].base_stat;
+            entrySpeed.innerHTML = data2.stats[0].base_stat;
+
+            let entryHeightVal = document.getElementById("entryHeightVal");
+            let entryWeightVal = document.getElementById("entryWeightVal")
+            entryHeightVal.innerHTML = data2.height / 10;
+            entryWeightVal.innerHTML = data2.weight / 10;
             }
             pokedexListEntryRequest.send()
             };
