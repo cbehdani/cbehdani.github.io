@@ -52,17 +52,19 @@ ul{
     top:111px;
     position: relative;
     overflow: scroll;
+    overflow-y: scroll;
     overflow-x: hidden;
     
     /* overflow-y: hidden; */
     margin: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* ::-webkit-scrollbar {display:none;} */
 
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
     -webkit-overflow-scrolling: touch;
-}
+} */
 
 /* #fastScroll{
     width: 5%;
