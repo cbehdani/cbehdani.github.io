@@ -60,6 +60,10 @@ ul{
 
 /* ::-webkit-scrollbar {display:none;} */
 
+::-webkit-scrollbar{
+    -webkit-overflow-scrolling: touch;
+}
+
 /* #fastScroll{
     width: 5%;
     float: left;
