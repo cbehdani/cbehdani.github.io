@@ -6,11 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pokedex Project</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js"></script>
     <script type="text/javascript" src="jsFile.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-
-
 </head>
 <body>
     <div id="title">
@@ -18,9 +17,7 @@
     </div>
     <div id="projectArea">
         <div id="pokedex">
-            <!-- <img src="images/pokedexFrame.jpg" id="pokedexFrame" alt=""> -->
             <div id="pokedexScreen">
-                <!-- <div id="fastScroll">|</div> -->
                 <ul id="listOfPokemon"></ul>
             </div>
             <div id="indivPokeEntry">
@@ -33,7 +30,6 @@
                     <div id="entryImageContainer">
                         <img id="entryImage"src="" alt="">
                     </div>
-                    
                     <div id="entryMeasurements">
                         <p id="entryHeight">
                             Height: <span id="entryHeightVal"></span> m
@@ -51,12 +47,6 @@
                 <div id="entryRightCol">
                     <div id="entryType">
                         <p id="typeLabel">Type</p>
-                        <!-- <div id="type1" class="type">
-                            Grass
-                        </div>
-                        <div id="type2" class="type">
-                            Poison
-                        </div> -->
                     </div>
                     <div id="entryStats">
                         <p>Stats:</p>
@@ -68,9 +58,6 @@
                         <p>Speed: <span id="entrySpeed"></span></p>
                     </div>
                 </div>
-
-
-                
             </div>
         </div>
     </div>

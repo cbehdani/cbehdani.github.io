@@ -1,42 +1,32 @@
 window.onload = function(){
+    console.log("starting");
+    //api call using axios
+    // axios.get("https://pokeapi.co/api/v2/pokemon/1/")
+    //     .then(response => console.log(response.data.name));
+
     var pokedexListEntryRequest = new XMLHttpRequest();
     pokedexListEntryRequest.open('GET', "https://pokeapi.co/api/v2/pokemon/", true);
 
     pokedexListEntryRequest.onload = function(){
         let data1 = JSON.parse(this.response);
-        // console.log(data1);
-        // console.log(typeof data1);
-        // console.log(data1.results);
-
         let arrayOfPokemon = data1.results;
-
-        // console.log(data.results.length);
-
         var listOfPokemon = document.getElementById("listOfPokemon");
 
-        // for (let i = 0; i < data.results.length; i++){
         for (let i = 0; i < 802; i++){
-
             let pokemonli = document.createElement('ul');
             pokemonli.innerHTML = "#" + (i+1) + " " + data1.results[i].name;
             pokemonli.classList.add("pokemonOnList");
             pokemonli.setAttribute("pokeNum", i + 1);
-
             let pokemonImage = document.createElement("img");
             let pokemonImageSource = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + (1+i) +".png";
             // pokemonImage.setAttribute("src", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png");
             pokemonImage.setAttribute("src", pokemonImageSource);
             pokemonImage.setAttribute("height", "30px");
             pokemonImage.setAttribute("width", "30px");
-            // pokemonImage.style.paddingRight = "10px";
             pokemonImage.style.transform = "scale(1.8)";
             pokemonImage.style.cssFloat = "right";
             pokemonli.append(pokemonImage);
-
             listOfPokemon.append(pokemonli);
-            
-            // console.log(data.results[i].name);
-            
         }
 
         //when clicking on an entry
@@ -44,23 +34,17 @@ window.onload = function(){
         // console.log(pokemonEntries.length + "outside");
         for (let i = 0; i<pokemonEntries.length; i++) {
             pokemonEntries[i].onclick = function () {
-
-
             // console.log(this.getAttribute("pokeNum"));
             var pokedexListImageRequest = new XMLHttpRequest();
-
             // pokedexListEntryRequest.open('GET', "https://pokeapi.co/api/v2/pokemon/1/", true);
+            
             pokedexListEntryRequest.open('GET', "https://pokeapi.co/api/v2/pokemon/" + this.getAttribute("pokeNum") + "/", true);
-
             pokedexListEntryRequest.onload = function(){
             var data2 = JSON.parse(this.response);
-
             let entryId = document.getElementById("entryId");
             entryId.innerHTML = data2.id;
-
             let entryName = document.getElementById("entryName");
             entryName.innerHTML = data2.name;
-
             let entryImage = document.getElementById("entryImage");
             //regular images
             // entryImage.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + data2.id + ".png";
@@ -74,8 +58,6 @@ window.onload = function(){
                 console.log("Couldn't find 3d image");
                 entryImage.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + data2.id + ".png";
             }
-            
-            
 
             let entryHP = document.getElementById("entryHP");
             let entryAttack = document.getElementById("entryAttack");
@@ -90,7 +72,6 @@ window.onload = function(){
             entrySpAtt.innerHTML = data2.stats[2].base_stat;
             entrySpDef.innerHTML = data2.stats[1].base_stat;
             entrySpeed.innerHTML = data2.stats[0].base_stat;
-
 
             let entryHeightVal = document.getElementById("entryHeightVal");
             let entryWeightVal = document.getElementById("entryWeightVal")
@@ -109,14 +90,12 @@ window.onload = function(){
                 abilityToBeAdded.classList.add("abilityItem"); 
                 abilityList.appendChild(abilityToBeAdded);
             }
-
             //deleting and determining new entry type
             let entryType = document.getElementById("entryType");
             let type = document.getElementsByClassName("type");
             while (type[0]) {
                 entryType.removeChild(type[0]);
             }
-
             //1 vs 2 types
             if (data2.types.length == 1){
                 let type1 = document.createElement("div");
@@ -140,24 +119,18 @@ window.onload = function(){
                 type2.style.backgroundColor = (String) (typeColor(type2.innerHTML));
                 entryType.appendChild(type2);
             }
-
             let indivPokeEntry = document.getElementById("indivPokeEntry");
             indivPokeEntry.style.display = "block";
             listOfPokemon.style.pointerEvents = "none";
-
             //play pokemon sound, only goes to 721/Volcanion currently
             var pokeSound = new Audio();
             pokeSound.src = "https://veekun.com/dex/media/pokemon/cries/" + data2.id +".ogg";
             pokeSound.volume = .2;
             pokeSound.play();
-
             }
             pokedexListEntryRequest.send()
-
-            
             };
         }
-
         var backButton= document.getElementById("backButton");
         backButton.onclick = function(){
             indivPokeEntry.style.display = "none";
@@ -210,8 +183,4 @@ window.onload = function(){
 
         } 
     }   
-
-
-    
 }
-
