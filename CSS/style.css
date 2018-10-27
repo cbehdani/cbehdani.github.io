@@ -1,8 +1,11 @@
 /* general layout/fonts */
+
+html{
+    scroll-behavior: smooth !important;
+}
 html, body {
     height: 100%;
     margin: 0px;
-
     position: relative;        
     max-width: 100%;
     overflow-x: hidden;
@@ -26,6 +29,9 @@ h1{
     font-size: 50px;
     padding: 5px;
     margin: 10px;
+}
+.btn{
+    padding: 0;
 }
 @font-face{
     font-family:Pacifico;
@@ -91,6 +97,9 @@ h1{
 .projectArea{
     border: .5px solid black;
     margin-top: 1600px !important;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    overflow-y: hidden;
 }
 .bioHeader{
     font-size: 6vh;

@@ -14,14 +14,6 @@ $(document).ready(function() {
     $("#jumbo1").toggleClass('jumbotronstate1');
     $("#jumbo1").toggleClass('jumbotronstate2');    
     });
-    // var scrollLink = $('.scrollArrowDown');
-    // //smooth scrolling
-    // scrollLink.click(function(e){
-    //     e.preventDefault();
-    //     $('body,html').animate({
-    //         scrollTop: $(this.hash).offset().top
-    //     }, 2000 )
-    // })
 });
 
 
