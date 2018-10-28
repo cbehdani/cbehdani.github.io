@@ -1,8 +1,10 @@
 /* general layout/fonts */
 
 html{
-    scroll-behavior: smooth !important;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
 }
 html, body {
     height: 100%;
