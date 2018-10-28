@@ -4,49 +4,22 @@ window.onload = function(){
     //var inputStorage = [];
     var categoryDivStorage = [];
     
-
-    //var addGradeButton = document.getElementById('addGradeButton');
     var calculateButton = document.getElementById('calculateButton');
     var addCategoryButton = document.getElementById('addCategoryButton');
-
     var addGradeButtons = document.getElementsByClassName('addGradeButtons');
-
-    //function to add a new grade input box
-    // addGradeButton.addEventListener("click", function(){
-    // var newGradeValueEntryBox = document.createElement("input");
-    // newGradeValueEntryBox.type = "number";
-    // newGradeValueEntryBox.classList.add('gradeInputSpacing');
-    // inputStorage.push(newGradeValueEntryBox);
-    // console.log(inputStorage.length);
-    // document.getElementById("numberInputArea").appendChild(document.createElement("br"));
-    // document.getElementById("numberInputArea").appendChild(newGradeValueEntryBox);
-    // });
 
     //function to add a new grade category when the button is clicked
     addCategoryButton.addEventListener("click", function(){
     var newGradeCategory = document.createElement("div");
     newGradeCategory.classList.add('categoryBoxSize');
 
-     categoryDivStorage.push(newGradeCategory);
+    categoryDivStorage.push(newGradeCategory);
     console.log(categoryDivStorage);
-
-    //add closeCategoryButton
 
     var closeCategoryButton = document.createElement("button");
     closeCategoryButton.innerHTML = "X";
     closeCategoryButton.classList.add('closeCategoryButton');
     newGradeCategory.appendChild(closeCategoryButton);
-
-    //may not need this, fixed x button margin
-    // var toolbarArea = document.createElement("div");
-    // toolbarArea.classList.add("toolbarArea");
-
-    // var closeCategoryButton = document.createElement("button");
-    // closeCategoryButton.innerHTML = "X";
-    // closeCategoryButton.classList.add('closeCategoryButton');
-    // toolbarArea.appendChild(closeCategoryButton);
-    // newGradeCategory.appendChild(toolbarArea);    
-
 
     //break in front of button
     newGradeCategory.appendChild(document.createElement("br"));
@@ -85,15 +58,12 @@ window.onload = function(){
         //if you clicked the add new grade button
         if(element.classList.contains("addGradeButtons")){
             var divContainingButton = element.parentNode;
-
             var gradeRow = document.createElement("div");
             gradeRow.classList.add('gradeRow');
-
             var newGradeNameEntryBox = document.createElement("input");
             newGradeNameEntryBox.placeholder = "Grade Name";
             newGradeNameEntryBox.classList.add('gradeInputSpacing');
             gradeRow.appendChild(newGradeNameEntryBox);
-
             var newGradeValueEntryBox = document.createElement("input");
             newGradeValueEntryBox.type = "number";
             newGradeValueEntryBox.placeholder = "Grade %";
@@ -101,17 +71,13 @@ window.onload = function(){
             newGradeValueEntryBox.classList.add('gradeInputSpacing');
             newGradeValueEntryBox.classList.add('gradeBox');
             gradeRow.appendChild(newGradeValueEntryBox);
-
             var closeGradeBoxButton = document.createElement("button");
             closeGradeBoxButton.innerHTML = "X";
             closeGradeBoxButton.classList.add('closeGradeBoxButton');
             gradeRow.appendChild(closeGradeBoxButton);
-
             //console.log(gradeRow);
             divContainingButton.appendChild(gradeRow);
-            
         }
-        
         if(element.classList.contains("closeCategoryButton")){
             console.log("closing pre size " + categoryDivStorage);
             var divContainingButton = element.parentNode;
@@ -126,15 +92,6 @@ window.onload = function(){
             console.log("closing post size " + categoryDivStorage);
         }
 
-        // if(element.classList.contains("closeCategoryButton")){
-        //     var divContainingButton = element.parentNode;
-        //     var testIndex = categoryDivStorage.indexOf(divContainingButton);
-        //     categoryDivStorage.splice(testIndex, 1);
-        //     //parent of the div to delete
-        //     var parentOfDiv = divContainingButton.parentNode;
-        //     parentOfDiv.removeChild(divContainingButton);
-        // }
-
         if(element.classList.contains("closeGradeBoxButton")){
             console.log(element);
             console.log(element.parentNode);
@@ -144,7 +101,6 @@ window.onload = function(){
             categoryDiv.removeChild(divContainingButton);
         }
     }
-
     //function to add up all input in boxes and output grade
     calculateButton.addEventListener("click", function(){
         var summedFinalGrade = 0;
@@ -163,7 +119,6 @@ window.onload = function(){
                 alert("Error in box " + (i + 1) + "- You have not entered a weight for this type of grade");
                 break;
             }
-
             var numberOfGradeBoxes = categoryDivStorage[i].getElementsByClassName('gradeBox');
             
             for (var j = 0; j < numberOfGradeBoxes.length; j++){
@@ -172,14 +127,11 @@ window.onload = function(){
                 if (!isNaN(parseInt(numberOfGradeBoxes[j].value))){
                     sectionAverage += parseInt(numberOfGradeBoxes[j].value);
                     accurateGrades++;
-                }
-                
+                }  
             }
             sectionAverage = sectionAverage / accurateGrades;
-            
             var changingAverageInCategory = categoryDivStorage[i].getElementsByClassName("categoryAverage");
             changingAverageInCategory[0].innerText = sectionAverage;
-
             weightedSectionAverage = sectionAverage * (checkingWeightPercentage.value * .01);
             // console.log (sectionAverage);
             // console.log (checkingWeightPercentage);
@@ -187,8 +139,24 @@ window.onload = function(){
             summedFinalGrade += weightedSectionAverage;
         }
         var finalGradeLocation = document.getElementById("finalGradeLocation");
-        finalGradeLocation.innerHTML = summedFinalGrade;
+        finalGradeLocation.innerHTML = (Math.round(summedFinalGrade * 100) / 100).toFixed(2);
     });
 
+    let helpButton = document.getElementById("helpButton");
+    let modal = document.getElementById("helpModal")
+    let closeButton = document.getElementById("closeBtn");
+    helpButton.onclick = function(){
+        modal.style.display = "block";
+    }
+    closeButton.onclick = function(){
+        modal.style.display = "none";
+    }
+    window.addEventListener('click', outsideClick);
+    function outsideClick(e){
+        if(e.target == modal){
+            modal.style.display = 'none';
+        }
+    }
+    
 }
 

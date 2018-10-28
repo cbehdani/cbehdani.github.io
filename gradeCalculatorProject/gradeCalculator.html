@@ -18,26 +18,21 @@
         <div id="calculationArea">
             <br>
             <button id="addCategoryButton">Add New Grade Category</button>
-            <!-- <button id="addGradeButton">Add Grade Entry</button> -->
             <button id="calculateButton">Calculate Grade</button>
-            <br>
             <button id="helpButton">Help</button>
+            <div id="helpModal" class="modal">
+                <div class="modal-content">
+                    <span id="closeBtn">&times;</span>
+                        <img src="/gradeCalculatorProject/HelpImage.JPG" alt="">
+                        <p id="modalText">Enter the % weight of the grade type at the top (40% for Quizzes in this example) and the % of each grade at the bottom (93% and 78% for Quiz 1 and 2)</p>
+                </div>
+            </div>
             <div id="calculationOutput">
                 <p>Your final grade is <span id="finalGradeLocation">...</span></p>
             </div>
-
             <div id="numberInputArea">
-                <!-- adding in number boxes here -->
-                <!-- <input type="number"> -->
             </div>
-
-            
         </div>
     </div>
-    
-    <script>
-        // getEventDetails();
-    </script>
-
 </body>
 </html>
