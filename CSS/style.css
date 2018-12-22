@@ -225,6 +225,7 @@ h1{
 .projectImage{
     /* height: 100px; */
     max-width: 105px;
+    padding-bottom: 4px;
 }
 
 .projectTextHeader{
