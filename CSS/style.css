@@ -203,7 +203,8 @@ h1{
     flex-wrap: wrap;
 }
 .projectItem{
-    width:33.33%;
+    /* width:33.33%; */
+    min-width: 200px;
     background-color: #505654;
     min-height:250px;
     border:5px dashed white;
