@@ -12,7 +12,7 @@ window.onload = function(){
         let arrayOfPokemon = data1.results;
         var listOfPokemon = document.getElementById("listOfPokemon");
 
-        for (let i = 0; i < 802; i++){
+        for (let i = 0; i < 20; i++){
             let pokemonli = document.createElement('ul');
             pokemonli.innerHTML = "#" + (i+1) + " " + data1.results[i].name;
             pokemonli.classList.add("pokemonOnList");
