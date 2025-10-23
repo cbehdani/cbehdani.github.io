@@ -21,6 +21,7 @@
 				</header>
 				<nav id="nav">
 					<ul>
+
 						<li><a href="#one" class="active">About</a></li>
 						<li><a href="#two">Things I Can Do</a></li>
 						<li><a href="#three">A Few Accomplishments</a></li>
@@ -28,6 +29,15 @@
 					</ul>
 				</nav>
 				<footer>
+						<a id="nav-light" 
+							href="javascript:void(0)" 
+							onclick="handleThemeUpdate()" 
+							aria-label="Toggle dark mode" 
+							class="theme-toggle" 
+							title="Toggle theme">
+							<i class="fas fa-sun"></i>
+							<i class="fas fa-moon"></i>
+						</a>
 					<ul class="icons">
 						<li><a href="https://www.linkedin.com/in/cameronbehdani/" target="_blank" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
 						<li><a href="https://github.com/cbehdani" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
@@ -40,14 +50,14 @@
 			<div id="wrapper">
 
 				<!-- Main -->
-					<div id="main">
+					<div id="main" class="is-preload light">
 
 						<!-- One -->
 							<section id="one">
 								<div class="image main" data-position="center">
 									<img src="images/cltskylinebanner.jpg" alt="" />
 								</div>
-								<div class="container">
+								<div class="container nav-light">
 									<header class="major">
 										<h2>Cameron Behdani</h2>
 									</header>
@@ -490,6 +500,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/lightswitch.js"></script>
 
 	</body>
 </html>
